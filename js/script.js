@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const alertMeBtn = document.getElementById('alertMeBtn');
-    const nameInput = document.getElementById('nameInput');
+    const alertButton = document.getElementById('alert-button');
+    const nameInput = document.getElementById('name-input');
     const headline = document.getElementById('headline');
 
-    alertMeBtn.addEventListener('click', function() {
+    alertButton.addEventListener('click', function() {
         const inputValue = nameInput.value;
         alert(`Debarlaben: ${inputValue}`);
         headline.textContent = inputValue;
