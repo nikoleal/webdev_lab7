@@ -3,9 +3,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const nameInput = document.getElementById('name-input');
     const headline = document.getElementById('headline');
 
-    alertButton.addEventListener('click', function() {
-        const inputValue = nameInput.value;
-        alert(`Debarlaben: ${inputValue}`);
-        headline.textContent = inputValue;
-    });
+    if (alertButton && nameInput && headline) {
+        alertButton.addEventListener('click', function() {
+            const inputValue = nameInput.value.trim(); // trims extra spaces
+            alert(`Debarlaben: ${inputValue}`); // shows alert with name prefix
+            headline.textContent = inputValue; // updates headline text
+        });
+    } else {
+        console.error('Missing one or more required elements (alert-button, name-input, headline)');
+    }
 });
